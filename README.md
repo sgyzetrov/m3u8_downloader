@@ -13,9 +13,11 @@ Download `.m3u8` file's associated `.ts` files and join them into a `full.ts` fi
 
 ## How to use it?
 
-Start jupyter notebook and run all cell, it will then prompt you to input `.m3u8` URL, you can either input absolute path on computer or full URL link on Internet. e.g. `http://cache.gensee.com/...omitted.../2018_04_24/Hn02H1YUyp_1524567489/hls/record.m3u8`
+Start jupyter notebook and run all cell, it will then prompt you to input `.m3u8` URL, you can either input absolute path to your `.m3u8` file on your computer or the full URL link for `.m3u8` file on Internet. 
+e.g. `http://cache.gensee.com/...omitted.../2018_04_24/Hn02H1YUyp_1524567489/hls/record.m3u8`
 
-Then it will prompt you to input static part of the URL for `.ts` files on server (end with \'/\'), in most cases `.ts` files are in the case directory with `.m3u8` file, so inoput should be the same minus `.m3u8` part. e.g. `http://cache.gensee.com/...omitted.../2018_04_24/Hn02H1YUyp_1524567489/hls/`
+Then it will prompt you to input static part of the URL for `.ts` files on server (end with \'/\'), in most cases `.ts` files are in the same directory with `.m3u8` file, so inoput should be the same minus `.m3u8` part. 
+e.g. `http://cache.gensee.com/...omitted.../2018_04_24/Hn02H1YUyp_1524567489/hls/`
 
 **Lastly you need to input download path, if you use default path, enter 'default'. (my default download directory is `/Users/simonguo/Downloads/m3u8download`, you will need to change that in jupyter notebook). Or you can input you own preferable path.**
 
