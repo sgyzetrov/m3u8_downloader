@@ -29,5 +29,5 @@ You can then rename `full.ts` to `**.mp4` (tested on mac 10.13.4).
 
 ## Additional material
 
-If you alreagy downloaded `.ts` files on your own, and only need to join them into one `.ts` file, you can rename all `.ts` files to numeric order (e.g. `1.ts`, `2.ts`, ...), then modify '716' in `join.sh` to the amount of `.ts` files in your own case and run `sh join.sh`. This shell script will help you join all `.ts` files into one `full.ts` file (tested on mac 10.13.4).
+If you already downloaded `.ts` files on your own, and only need to join them into one `.ts` file, you can rename all `.ts` files into numeric order (e.g. `1.ts`, `2.ts`, ...), then modify number '716' in `join.sh` to the amount of `.ts` files in your own case and run `sh join.sh`. This shell script will help you join all `.ts` files into one `full.ts` file (tested on mac 10.13.4).
 
