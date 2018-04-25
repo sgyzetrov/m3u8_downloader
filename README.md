@@ -3,6 +3,8 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Python 2.7](https://img.shields.io/badge/python-3.6-green.svg)](https://www.python.org/)
 
+Comments in jupyter notebook are written in Chinese.
+
 `.m3u8` video downloader used to download free class on [Neworiental Public Class ('新东方XDF微课堂')](http://weike.xdf.cn) 
 
 ## What does it do?
@@ -24,4 +26,8 @@ Once it starts downloading, you will see something like:
 When download is complete there will be a `full.ts` file in download directory.
 
 You can then rename `full.ts` to `**.mp4` (tested on mac 10.13.4).
+
+## Additional material
+
+If you alreagy downloaded `.ts` files on your own, and only need to join them into one `.ts` file, you can rename all `.ts` files to numeric order (e.g. `1.ts`, `2.ts`, ...), then modify '716' in `join.sh` to the amount of `.ts` files in your own case and run `sh join.sh`. This shell script will help you join all `.ts` files into one `full.ts` file (tested on mac 10.13.4).
 
