@@ -3,7 +3,6 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Python 2.7](https://img.shields.io/badge/python-3.6-green.svg)](https://www.python.org/)
 
-Comments in jupyter notebook are written in Chinese.
 
 `.m3u8` video downloader used to download free class on [Neworiental Public Class ('新东方XDF微课堂')](http://weike.xdf.cn) 
 
