@@ -1,5 +1,6 @@
 # m3u8_downloader4XDF
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/01f9f2b8a9234efdb8b4bd2573692b7a)](https://app.codacy.com/app/sgyzetrov/m3u8_downloader4XDF?utm_source=github.com&utm_medium=referral&utm_content=sgyzetrov/m3u8_downloader4XDF&utm_campaign=badger)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Python 2.7](https://img.shields.io/badge/python-3.6-green.svg)](https://www.python.org/)
 
