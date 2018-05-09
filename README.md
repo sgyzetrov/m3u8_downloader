@@ -2,7 +2,7 @@
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Python 2.7](https://img.shields.io/badge/python-3.6-green.svg)](https://www.python.org/)
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8a0bfb403d8b417ab605e4ca1fc4690c)](https://www.codacy.com/app/sgyzetrov/m3u8_downloader4XDF?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sgyzetrov/m3u8_downloader4XDF&amp;utm_campaign=Badge_Grade)
 
 `.m3u8` video downloader used to download free class on [Neworiental Public Class ('新东方XDF微课堂')](http://weike.xdf.cn) 
 
