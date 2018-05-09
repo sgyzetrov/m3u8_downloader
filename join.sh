@@ -1,3 +1,4 @@
+#!/bin/bash
 cmd1="cat "
 cmd2=".ts >> full.ts"
 # modify '716' to the amount of .ts files in your own case
