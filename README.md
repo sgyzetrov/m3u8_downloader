@@ -26,7 +26,9 @@ Once it starts downloading, you will see something like:
 
 When download is complete there will be a `full.ts` file in download directory.
 
-You can then rename `full.ts` to `**.mp4` (tested on mac 10.13.4).
+You can then rename `full.ts` to `**.mp4` (tested on mac 10.13.4, 10.13.5).
+
+Tested 07.16.2018 (mm/dd/yyyy), will work for videos on Zhihu.com, minor manual web sniffings required.
 
 ## Additional material
 
