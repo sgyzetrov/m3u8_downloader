@@ -30,6 +30,22 @@ You can then rename `full.ts` to `**.mp4` (tested on mac 10.13.4, 10.13.5).
 
 Tested 07.16.2018 (mm/dd/yyyy), will work for videos on Zhihu.com, minor manual web sniffings required.
 
+### How to download a video on Zhihu
+
+Step1. pick your video
+
+![zhihu_demo1.png](https://github.com/sgyzetrov/m3u8_downloader4XDF/blob/master/zhihu_demo1.png)
+
+Step2. inspect elements to open video URL in new Tab
+
+![zhihu_demo2.png](https://github.com/sgyzetrov/m3u8_downloader4XDF/blob/master/zhihu_demo2.png)
+
+Step3. web sniffing to find the `.m3u8` link on Zhihu server
+
+![zhihu_demo3.png](https://github.com/sgyzetrov/m3u8_downloader4XDF/blob/master/zhihu_demo3.png)
+
+Step4. use the `.m3u8` link to download the video in m3u8_downloader4XDF
+
 ## Additional material
 
 If you already downloaded `.ts` files on your own, and only need to join them into one `.ts` file, you can rename all `.ts` files into numeric order (e.g. `1.ts`, `2.ts`, ...), then modify number '716' in `join.sh` to the amount of `.ts` files in your own case and run `sh join.sh`. This shell script will help you join all `.ts` files into one `full.ts` file (tested on mac 10.13.4).
