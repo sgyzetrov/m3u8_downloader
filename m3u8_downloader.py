@@ -12,9 +12,9 @@ import requests
 import m3u8
 
 def  check_path(_path):
-    # 判断存储路径是否存在
+    # check if download path exit
     if os.path.isdir(_path) or os.path.isabs(_path):
-        # 判断存储路径是否为空
+        # check if download path is empty
         if not os.listdir(_path):
             return _path
 
@@ -54,24 +54,24 @@ def m3u8_video_download(m3u8_url, url_static, _path='/Users/simonguo/Downloads/m
     file_No = 0
     
     for _url in full_web_url:
-        # 选项1: .ts视频保存在本地的名称为本身在服务器上的名称
-        # movie_name = _url.split('/')[11] # 针对具体问题，这里文件名是在url以‘/’分割后的第12个位置，故取index 12-1 [因为index从0开始]        
+        # option 1: .ts files are stored using its original name on server
+        # movie_name = _url.split('/')[11] # in my case name part is at 12th place in URL (sep with '/')        
         try:
-            # 'Connection':'close' 防止请求端口占用
-            # timeout=30    防止请求时间超长连接
+            # 'Connection':'close' prevent port's occupation
+            # timeout=30    prevent timeout  from being too long
             movie = requests.get(_url, headers = {'Connection':'close'}, timeout=60)
-            # 选项2: 按照数字顺序重命名，利于合并        
+            # option 2: rename .ts files into numeric order like 1.ts, 2.ts, ... good for join
             file_No += 1
             movie_name = str(file_No)+'.ts'
             with open(movie_name, 'wb') as movie_content:
                 movie_content.writelines(movie)  
-            # 选项1: 打印当前下载文件
+            # option 1: output current file's name
             # print('>>>[+] File ', movie_name, ' in total ', len(full_web_url), ' files\tdone')
-            # 选项2: 打印直观进度条
+            # option 2: output progress bar 
             prograss = file_No * 50 / len(full_web_url)
             sys.stdout.write('\r>>>[+] progress: [%s%s] %d/%d files done' %('|' * round(prograss), (' ' * (50-round(prograss))), file_No, len(full_web_url)))
             sys.stdout.flush()
-        # 捕获异常，记录失败请求
+        # catch exceptionï¼Œlog bad request
         except:
             error_get.append(_url)
             continue
@@ -79,10 +79,10 @@ def m3u8_video_download(m3u8_url, url_static, _path='/Users/simonguo/Downloads/m
         print('Warning: Total of %d request(s) failed, Retrying...' % len(file_list))
         print('-' * 60)
         download_movie(error_get, _path)
-    # 如果没有不成功的请求就结束
+    # all file good, output msg
     else:
         print('\n>>>[+] Download successfully!!!')
-    # 合并.ts文件
+    # join .ts files
     for filename in range(1, len(full_web_url)+1):
         os.system('cat ' + str(filename) + '.ts >> full.ts')
 
