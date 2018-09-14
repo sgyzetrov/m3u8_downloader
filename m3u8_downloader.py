@@ -3,7 +3,7 @@
 
 """
 Auther: Guo Yang <guoyang@webmail.hzau.edu.cn>
-Version: 0.1.1
+Version: 0.1.2
 """
 
 import os
@@ -11,7 +11,7 @@ import sys
 import requests
 import m3u8
 
-def  check_path(_path):
+def check_path(_path):
     # check if download path exit
     if os.path.isdir(_path) or os.path.isabs(_path):
         # check if download path is empty
@@ -29,7 +29,6 @@ def  check_path(_path):
                 else:
                     _path = input('>>>[+] input download path:\n>>>[+] : ')
                     check_path(_path)
-                    
             except Exception as e:
                 print(e)
                 exit(0)
@@ -55,7 +54,7 @@ def m3u8_video_download(m3u8_url, url_static, _path='/Users/simonguo/Downloads/m
     
     for _url in full_web_url:
         # option 1: .ts files are stored using its original name on server
-        # movie_name = _url.split('/')[11] # in my case name part is at 12th place in URL (sep with '/')        
+        # movie_name = _url.split('/')[11] # in my case name part is at 12th place in URL (sep with '/')
         try:
             # 'Connection':'close' prevent port's occupation
             # timeout=30    prevent timeout  from being too long
@@ -64,15 +63,15 @@ def m3u8_video_download(m3u8_url, url_static, _path='/Users/simonguo/Downloads/m
             file_No += 1
             movie_name = str(file_No)+'.ts'
             with open(movie_name, 'wb') as movie_content:
-                movie_content.writelines(movie)  
+                movie_content.writelines(movie)
             # option 1: output current file's name
             # print('>>>[+] File ', movie_name, ' in total ', len(full_web_url), ' files\tdone')
-            # option 2: output progress bar 
+            # option 2: output progress bar
             prograss = file_No * 50 / len(full_web_url)
             sys.stdout.write('\r>>>[+] progress: [%s%s] %d/%d files done' %('|' * round(prograss), (' ' * (50-round(prograss))), file_No, len(full_web_url)))
             sys.stdout.flush()
-        # catch exceptionï¼Œlog bad request
-        except:
+        # catch exception, log bad request
+        except Exception as e:
             error_get.append(_url)
             continue
     if error_get:
