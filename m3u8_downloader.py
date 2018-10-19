@@ -51,6 +51,7 @@ def m3u8_video_download(m3u8_url, url_static, _path='/Users/simonguo/Downloads/m
     error_get = []
     
     file_No = 0
+    err_No = 0
     
     for _url in full_web_url:
         # option 1: .ts files are stored using its original name on server
@@ -77,7 +78,16 @@ def m3u8_video_download(m3u8_url, url_static, _path='/Users/simonguo/Downloads/m
     if error_get:
         print('Warning: Total of %d request(s) failed, Retrying...' % len(error_get))
         print('-' * 60)
-        m3u8_video_download(error_get, _path)
+        for _url_err in error_get:
+            try:
+                movie = requests.get(_url, headers = {'Connection':'close'}, timeout=60)
+                err_No += 1
+                movie_name = 'err_No_'+str(err_No)+'.ts'
+                with open(movie_name, 'wb') as movie_content:
+                    movie_content.writelines(movie)
+            except Exception as e:
+                print('Error: ', _url_err, 'retry failed...log: ', e)
+                continue
     # all file good, output msg
     else:
         print('\n>>>[+] Download successfully!!!')
