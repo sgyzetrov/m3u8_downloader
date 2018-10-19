@@ -1,3 +1,5 @@
+<img align="center" src='./m3u8_downloader_banner.png'/>
+
 # m3u8_downloader
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
