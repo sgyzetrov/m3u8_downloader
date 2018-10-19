@@ -75,9 +75,9 @@ def m3u8_video_download(m3u8_url, url_static, _path='/Users/simonguo/Downloads/m
             error_get.append(_url)
             continue
     if error_get:
-        print('Warning: Total of %d request(s) failed, Retrying...' % len(file_list))
+        print('Warning: Total of %d request(s) failed, Retrying...' % len(error_get))
         print('-' * 60)
-        download_movie(error_get, _path)
+        m3u8_video_download(error_get, _path)
     # all file good, output msg
     else:
         print('\n>>>[+] Download successfully!!!')
