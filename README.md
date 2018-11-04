@@ -24,7 +24,7 @@ e.g. `http://cache.gensee.com/...omitted.../2018_04_24/Hn02H1YUyp_1524567489/hls
 
 Once it starts downloading, you will see something like:
 
-![example.png](https://github.com/sgyzetrov/m3u8_downloader4XDF/blob/master/example.png)
+![example.png](./example.png)
 
 When download is complete there will be a `full.ts` file in download directory.
 
@@ -38,17 +38,17 @@ Tested 07.16.2018 (mm/dd/yyyy), will work for videos on Zhihu.com, minor manual 
 
 Step1. pick your video
 
-![zhihu_demo1.png](https://github.com/sgyzetrov/m3u8_downloader4XDF/blob/master/zhihu_demo1.png)
+![zhihu_demo1.png](./zhihu_demo1.png)
 
 Step2. inspect elements to open video URL in new Tab
 
-![zhihu_demo2.png](https://github.com/sgyzetrov/m3u8_downloader4XDF/blob/master/zhihu_demo2.png)
+![zhihu_demo2.png](.zhihu_demo2.png)
 
 Step3. web sniffing to find the `.m3u8` link on Zhihu server
 
-![zhihu_demo3.png](https://github.com/sgyzetrov/m3u8_downloader4XDF/blob/master/zhihu_demo3.png)
+![zhihu_demo3.png](./zhihu_demo3.png)
 
-Step4. use the `.m3u8` link to download the video in m3u8_downloader4XDF
+Step4. use the `.m3u8` link to download the video in m3u8_downloader
 
 ## Additional material
 
