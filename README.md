@@ -42,7 +42,7 @@ Step1. pick your video
 
 Step2. inspect elements to open video URL in new Tab
 
-![zhihu_demo2.png](.zhihu_demo2.png)
+![zhihu_demo2.png](./zhihu_demo2.png)
 
 Step3. web sniffing to find the `.m3u8` link on Zhihu server
 
